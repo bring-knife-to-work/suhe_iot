@@ -1,0 +1,24 @@
+{
+  "name": "suhe_iot",
+  "version": "1.0.0",
+  "description": "素盒物联 - 开源数字标牌展示网站（Vue 2 + Vite）",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bring-knife-to-work/suhe_iot.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^2.7.16",
+    "vue-router": "^3.6.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue2": "^2.3.3",
+    "vite": "^4.5.5"
+  }
+}
