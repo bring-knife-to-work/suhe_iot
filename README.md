@@ -129,22 +129,18 @@ export const companyContact = {
 
 站点地址：https://bring-knife-to-work.github.io/suhe_iot/
 
-### GitHub Pages（推荐）
+### GitHub Pages
 
 1. 仓库 **Settings → Pages → Build and deployment**
-2. **Source** 选择 **GitHub Actions**（不要选 Deploy from branch）
-3. 推送代码到 `main` 分支后，Actions 会自动构建并部署
+2. **Source** 选择 **Deploy from a branch**
+3. **Branch** 选择 **`gh-pages`**，目录选 **`/ (root)`**
+4. 推送代码到 `main` 后，Actions 会自动构建并推送到 `gh-pages` 分支
+
+> 不要使用「Deploy from branch → main」，否则会发布源码导致白屏。
 
 项目已配置：
 - `vite.config.js` 中 `base: '/suhe_iot/'`
-- `.github/workflows/deploy.yml` 自动构建 `dist` 并发布
-
-### 本地预览生产构建
-
-```bash
-npm run build
-npm run preview
-```
+- `.github/workflows/deploy.yml` 自动构建 `dist` 并发布到 `gh-pages` 分支
 
 ## 参与贡献
 
