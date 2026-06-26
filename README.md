@@ -127,15 +127,24 @@ export const companyContact = {
 
 ## 部署
 
-### GitHub Pages
+站点地址：https://bring-knife-to-work.github.io/suhe_iot/
 
-1. 在 `vite.config.js` 中设置 `base: '/suhe_iot/'`
-2. 构建：`npm run build`
-3. 将 `dist/` 目录部署至 gh-pages 分支
+### GitHub Pages（推荐）
 
-### Vercel / Netlify
+1. 仓库 **Settings → Pages → Build and deployment**
+2. **Source** 选择 **GitHub Actions**（不要选 Deploy from branch）
+3. 推送代码到 `main` 分支后，Actions 会自动构建并部署
 
-连接 GitHub 仓库，构建命令 `npm run build`，输出目录 `dist`。
+项目已配置：
+- `vite.config.js` 中 `base: '/suhe_iot/'`
+- `.github/workflows/deploy.yml` 自动构建 `dist` 并发布
+
+### 本地预览生产构建
+
+```bash
+npm run build
+npm run preview
+```
 
 ## 参与贡献
 
